@@ -25,23 +25,11 @@ public class JDBCTestDerby {
 			System.out.println(statement.getResultSetType());
 			System.out.println(resultSet.getType());
 
-			resultSet.last();
-			System.out.println(resultSet.getString("NAME"));
-			resultSet.previous();
-			System.out.println(resultSet.getString("NAME"));
-			resultSet.previous();
-			System.out.println(resultSet.getString("NAME"));
-			resultSet.previous();
-			System.out.println(resultSet.getString("NAME"));
-			resultSet.absolute(-1);
-			System.out.println(resultSet.getString("NAME"));
-			resultSet.absolute(0);
-			resultSet.next();
-			System.out.println(resultSet.getString("NAME"));
-			resultSet.first();
-			System.out.println(resultSet.getString("NAME"));
-			resultSet.relative(2);
-			System.out.println(resultSet.getString("NAME"));
+			System.out.println(resultSet.absolute(0));
+			System.out.println(resultSet.absolute(5));
+			System.out.println(resultSet.previous());
+			System.out.println(resultSet.relative(-2));
+			System.out.println(resultSet.relative(100));
 		}
 		catch(SQLException se) {
 			se.printStackTrace();

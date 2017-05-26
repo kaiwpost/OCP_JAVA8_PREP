@@ -1,6 +1,6 @@
 ----------------------------------------------------------------
-Fri May 26 13:29:01 PDT 2017:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.13.1.1 - (1765088): instance a816c00e-015c-4672-b41d-000016288380 
+Fri May 26 13:54:56 PDT 2017:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.13.1.1 - (1765088): instance a816c00e-015c-468a-6dbf-000016288358 
 on database directory /Users/kpost/git/OCP_JAVA8_PREP/OCP_JAVA8_PREP/zoo with class loader sun.misc.Launcher$AppClassLoader@2a139a55 
 Loaded from file:/Users/kpost/.m2/repository/org/apache/derby/derby/10.13.1.1/derby-10.13.1.1.jar
 java.vendor=Oracle Corporation
