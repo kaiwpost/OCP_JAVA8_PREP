@@ -16,20 +16,26 @@ public class JDBCTestDerby {
 	public static void main(String[] args) {
 		
 		try(Connection connection = DriverManager.getConnection(URL);
-			Statement statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-				
 			//Statement statement = connection.createStatement();
+			Statement statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
 			ResultSet resultSet = statement.executeQuery("SELECT NAME FROM ANIMALS")) {
 			
 			System.out.println(connection);
-			System.out.println(statement.getResultSetType());
-			System.out.println(resultSet.getType());
-
+			System.out.println(statement.getFetchSize());
+			System.out.println(resultSet.getFetchSize());
+			
 			System.out.println(resultSet.absolute(0));
 			System.out.println(resultSet.absolute(5));
 			System.out.println(resultSet.previous());
 			System.out.println(resultSet.relative(-2));
 			System.out.println(resultSet.relative(100));
+			
+			System.out.println(resultSet);
+			
+			resultSet.absolute(0);
+			while(resultSet.next()) {
+				System.out.println(resultSet.getString(1));
+			}
 		}
 		catch(SQLException se) {
 			se.printStackTrace();
